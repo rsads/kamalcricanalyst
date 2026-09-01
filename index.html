@@ -1,1 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+
+<meta name="theme-color" content="#050816">
+
+<title>Kamal Cricket Analyst™ | Cricket Analysis</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    background:#03050d;
+    font-family:Inter,Arial,sans-serif;
+    color:#fff;
+}
+
+body{
+    min-height:100svh;
+}
+
+/* MAIN */
+
+.page{
+    width:100%;
+    height:100svh;
+    min-height:100svh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    position:relative;
+
+    background:
+    radial-gradient(circle at 15% 15%,rgba(0,212,255,.18),transparent 30%),
+    radial-gradient(circle at 90% 80%,rgba(84,53,255,.22),transparent 32%),
+    linear-gradient(135deg,#03050d,#07101f 50%,#03050c);
+}
+
+/* BACKGROUND GLOW */
+
+.page:before,
+.page:after{
+    content:"";
+    position:absolute;
+    border-radius:50%;
+    pointer-events:none;
+}
+
+.page:before{
+    width:280px;
+    height:280px;
+    left:-170px;
+    top:-100px;
+    border:1px solid rgba(0,220,255,.18);
+    box-shadow:
+        0 0 80px rgba(0,210,255,.12),
+        inset 0 0 50px rgba(0,210,255,.05);
+    animation:floatOne 7s ease-in-out infinite;
+}
+
+.page:after{
+    width:350px;
+    height:350px;
+    right:-210px;
+    bottom:-170px;
+    border:1px solid rgba(110,70,255,.2);
+    box-shadow:0 0 100px rgba(90,50,255,.14);
+    animation:floatTwo 9s ease-in-out infinite;
+}
+
+@keyframes floatOne{
+    0%,100%{transform:translate(0,0)}
+    50%{transform:translate(25px,20px)}
+}
+
+@keyframes floatTwo{
+    0%,100%{transform:translate(0,0)}
+    50%{transform:translate(-20px,-25px)}
+}
+
+/* CARD */
+
+.container{
+    width:min(94%,520px);
+    height:calc(100svh - 18px);
+    max-height:760px;
+    position:relative;
+    z-index:5;
+}
+
+.card{
+    width:100%;
+    height:100%;
+    position:relative;
+    overflow:hidden;
+
+    border:1px solid rgba(117,211,255,.20);
+    border-radius:28px;
+
+    padding:clamp(13px,3.2vw,22px);
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(17,31,58,.93),
+        rgba(5,10,23,.96)
+    );
+
+    box-shadow:
+        0 30px 100px rgba(0,0,0,.65),
+        inset 0 1px 0 rgba(255,255,255,.06);
+
+    backdrop-filter:blur(20px);
+}
+
+/* TOP */
+
+.top{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+}
+
+.badge{
+    display:flex;
+    align-items:center;
+    gap:7px;
+
+    padding:8px 12px;
+
+    border-radius:999px;
+
+    font-size:9px;
+    font-weight:800;
+    letter-spacing:.8px;
+
+    color:#bdf5ff;
+
+    background:rgba(0,210,255,.07);
+    border:1px solid rgba(0,210,255,.2);
+}
+
+.dot{
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:#22dcff;
+    box-shadow:0 0 14px #22dcff;
+
+    animation:pulse 1.8s infinite;
+}
+
+@keyframes pulse{
+    0%,100%{
+        opacity:1;
+        transform:scale(1);
+    }
+    50%{
+        opacity:.45;
+        transform:scale(.7);
+    }
+}
+
+.logo{
+    width:50px;
+    height:50px;
+
+    border-radius:16px;
+    object-fit:cover;
+
+    border:2px solid rgba(83,225,255,.8);
+
+    box-shadow:
+        0 0 25px rgba(0,210,255,.25);
+}
+
+/* HERO */
+
+.hero{
+    text-align:center;
+    padding:clamp(12px,3vh,24px) 4px 0;
+}
+
+.kicker{
+    font-size:9px;
+    letter-spacing:2px;
+    color:#63dcff;
+    font-weight:800;
+    margin-bottom:7px;
+}
+
+h1{
+    font-size:clamp(27px,8.8vw,42px);
+    line-height:.96;
+    letter-spacing:-1.5px;
+    font-weight:950;
+}
+
+h1 span{
+    display:block;
+    background:linear-gradient(
+        90deg,
+        #4eeaff,
+        #ffffff,
+        #7a78ff
+    );
+
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+}
+
+.subtitle{
+    max-width:420px;
+    margin:9px auto 0;
+
+    color:#aab8d0;
+
+    font-size:11px;
+    line-height:1.5;
+}
+
+/* FEATURE PILLS */
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:6px;
+    margin-top:13px;
+}
+
+.feature{
+    min-width:0;
+    padding:8px 4px;
+
+    text-align:center;
+
+    border-radius:12px;
+
+    background:rgba(255,255,255,.035);
+    border:1px solid rgba(255,255,255,.07);
+
+    color:#cfe9f5;
+
+    font-size:7.5px;
+    font-weight:800;
+}
+
+.feature strong{
+    display:block;
+    font-size:15px;
+    margin-bottom:3px;
+}
+
+/* CONTENT */
+
+.content{
+    margin-top:12px;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:7px;
+}
+
+.info{
+    padding:10px;
+
+    border-radius:15px;
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(32,58,99,.48),
+        rgba(9,16,34,.55)
+    );
+
+    border:1px solid rgba(117,196,255,.11);
+}
+
+.info-number{
+    font-size:17px;
+    font-weight:950;
+    color:#4ee7ff;
+}
+
+.info-title{
+    margin-top:2px;
+    font-size:9px;
+    font-weight:900;
+}
+
+.info-text{
+    margin-top:3px;
+
+    font-size:7px;
+    line-height:1.35;
+
+    color:#8291aa;
+}
+
+/* ANALYSIS PANEL */
+
+.panel{
+    margin-top:10px;
+
+    padding:10px 11px;
+
+    border-radius:16px;
+
+    background:rgba(255,255,255,.035);
+    border:1px solid rgba(255,255,255,.075);
+}
+
+.panel-title{
+    display:flex;
+    align-items:center;
+    gap:7px;
+
+    font-size:10px;
+    font-weight:900;
+
+    margin-bottom:6px;
+}
+
+.panel-icon{
+    width:19px;
+    height:19px;
+
+    display:grid;
+    place-items:center;
+
+    border-radius:6px;
+
+    background:rgba(0,220,255,.10);
+    color:#52e9ff;
+}
+
+.point{
+    display:flex;
+    align-items:center;
+    gap:7px;
+
+    padding:4px 0;
+
+    font-size:8px;
+    color:#c6d1e2;
+
+    border-bottom:1px solid rgba(255,255,255,.055);
+}
+
+.point:last-child{
+    border-bottom:0;
+}
+
+.tick{
+    width:15px;
+    height:15px;
+
+    display:grid;
+    place-items:center;
+
+    flex:none;
+
+    border-radius:5px;
+
+    color:#4fe8ff;
+    background:rgba(0,220,255,.08);
+
+    font-size:9px;
+}
+
+/* CTA */
+
+.cta{
+    position:relative;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    width:100%;
+
+    min-height:57px;
+
+    margin-top:10px;
+
+    text-decoration:none;
+
+    overflow:hidden;
+
+    border-radius:16px;
+
+    color:#fff;
+
+    font-size:13px;
+    font-weight:950;
+    letter-spacing:.3px;
+
+    background:
+    linear-gradient(
+        100deg,
+        #00bfff,
+        #6b55ff,
+        #d53cff,
+        #00bfff
+    );
+
+    background-size:300% 100%;
+
+    box-shadow:
+        0 12px 35px rgba(99,64,255,.35),
+        0 0 30px rgba(0,196,255,.13);
+
+    animation:
+        gradient 4s ease infinite,
+        buttonPulse 2.2s ease-in-out infinite;
+}
+
+.cta:before{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-120%;
+
+    width:80%;
+    height:100%;
+
+    background:
+    linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.45),
+        transparent
+    );
+
+    transform:skewX(-20deg);
+
+    animation:shine 2.8s infinite;
+}
+
+.cta span,
+.cta small{
+    position:relative;
+    z-index:2;
+}
+
+.cta small{
+    margin-top:4px;
+
+    font-size:7px;
+    font-weight:700;
+    letter-spacing:1px;
+
+    opacity:.72;
+}
+
+@keyframes gradient{
+    0%,100%{
+        background-position:0% 50%;
+    }
+    50%{
+        background-position:100% 50%;
+    }
+}
+
+@keyframes buttonPulse{
+    0%,100%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.018);
+    }
+}
+
+@keyframes shine{
+    0%{
+        left:-120%;
+    }
+    45%,100%{
+        left:140%;
+    }
+}
+
+/* FOOTER */
+
+.disclaimer{
+    margin:7px 5px 0;
+
+    text-align:center;
+
+    color:#64718a;
+
+    font-size:7px;
+    line-height:1.35;
+}
+
+.footer{
+    text-align:center;
+
+    margin-top:4px;
+
+    color:#4d5a71;
+
+    font-size:7px;
+}
+
+/* SMALL DEVICES */
+
+@media(max-width:380px){
+
+    .container{
+        width:95%;
+        height:calc(100svh - 12px);
+    }
+
+    .card{
+        border-radius:23px;
+        padding:11px;
+    }
+
+    .hero{
+        padding-top:10px;
+    }
+
+    h1{
+        font-size:27px;
+    }
+
+    .subtitle{
+        font-size:10px;
+    }
+
+    .features{
+        margin-top:9px;
+    }
+
+    .feature{
+        padding:6px 3px;
+        font-size:7px;
+    }
+
+    .feature strong{
+        font-size:13px;
+    }
+
+    .content{
+        margin-top:8px;
+    }
+
+    .info{
+        padding:8px;
+    }
+
+    .panel{
+        margin-top:8px;
+        padding:8px 10px;
+    }
+
+    .cta{
+        margin-top:8px;
+        min-height:51px;
+    }
+
+    .disclaimer{
+        margin-top:5px;
+    }
+}
+
+/* VERY SHORT SCREEN */
+
+@media(max-height:700px){
+
+    .hero{
+        padding-top:8px;
+    }
+
+    .features{
+        margin-top:7px;
+    }
+
+    .content{
+        margin-top:7px;
+    }
+
+    .panel{
+        margin-top:7px;
+        padding:7px 10px;
+    }
+
+    .point{
+        padding:3px 0;
+    }
+
+    .cta{
+        margin-top:7px;
+        min-height:48px;
+    }
+
+    .disclaimer{
+        margin-top:4px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<main class="page">
+
+<div class="container">
+
+<section class="card">
+
+<!-- TOP -->
+<div class="top">
+
+<div class="badge">
+<span class="dot"></span>
+CRICKET ANALYSIS HUB
+</div>
+
+<img
+src="./logo.jpg"
+class="logo"
+alt="Kamal Cricket Analyst">
+
+</div>
+
+
+<!-- HERO -->
+<div class="hero">
+
+<div class="kicker">
+SMART • SIMPLE • INFORMATIVE
+</div>
+
+<h1>
+KAMAL
+<span>CRICKET ANALYST™</span>
+</h1>
+
+<p class="subtitle">
+Cricket match analysis, player form, team updates,
+key statistics and important match information —
+all in one place.
+</p>
+
+</div>
+
+
+<!-- FEATURES -->
+
+<div class="features">
+
+<div class="feature">
+<strong>🏏</strong>
+MATCH
+</div>
+
+<div class="feature">
+<strong>📊</strong>
+STATS
+</div>
+
+<div class="feature">
+<strong>👥</strong>
+TEAMS
+</div>
+
+<div class="feature">
+<strong>⚡</strong>
+UPDATES
+</div>
+
+</div>
+
+
+<!-- INFORMATION GRID -->
+
+<div class="content">
+
+<div class="info">
+<div class="info-number">01</div>
+<div class="info-title">Match Preview</div>
+<div class="info-text">
+Key match factors, conditions and important information.
+</div>
+</div>
+
+<div class="info">
+<div class="info-number">02</div>
+<div class="info-title">Team News</div>
+<div class="info-text">
+Squads, combinations and relevant team updates.
+</div>
+</div>
+
+<div class="info">
+<div class="info-number">03</div>
+<div class="info-title">Player Form</div>
+<div class="info-text">
+Recent performances and useful player statistics.
+</div>
+</div>
+
+<div class="info">
+<div class="info-number">04</div>
+<div class="info-title">Match Updates</div>
+<div class="info-text">
+Important cricket-related information during matches.
+</div>
+</div>
+
+</div>
+
+
+<!-- ANALYSIS PANEL -->
+
+<div class="panel">
+
+<div class="panel-title">
+
+<div class="panel-icon">✓</div>
+
+WHAT YOU CAN EXPECT
+
+</div>
+
+<div class="point">
+<div class="tick">✓</div>
+Team & player information
+</div>
+
+<div class="point">
+<div class="tick">✓</div>
+Recent form and match statistics
+</div>
+
+<div class="point">
+<div class="tick">✓</div>
+Match-related updates and analysis
+</div>
+
+</div>
+
+
+<!-- CTA -->
+
+<a
+class="cta"
+href="https://t.me/+-k2TXkKdo11lODc1"
+target="_blank"
+rel="noopener"
+onclick="trackTelegramClick()">
+
+<span>JOIN KAMAL CRICKET ANALYST →</span>
+
+<small>
+OPEN TELEGRAM • CRICKET ANALYSIS & UPDATES
+</small>
+
+</a>
+
+
+<!-- DISCLAIMER -->
+
+<p class="disclaimer">
+For general informational and entertainment purposes only.
+Match information may change. Please verify important details
+through official cricket sources.
+</p>
+
+<div class="footer">
+© 2026 KAMAL CRICKET ANALYST™
+</div>
+
+</section>
+
+</div>
+
+</main>
+
+
+<script>
+
+/* Telegram Button Tracking */
+
+function trackTelegramClick(){
+
+    if(typeof fbq === "function"){
+
+        fbq(
+            'track',
+            'Contact',
+            {
+                content_name:'Kamal Cricket Analyst Telegram',
+                content_category:'Cricket Analysis'
+            }
+        );
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
