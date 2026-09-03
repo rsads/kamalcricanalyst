@@ -1,6 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head><!-- Meta Pixel Code -->
+ <!DOCTYPE html>                                                                                         
+ <html lang="en">                                                                                        
+ <head>
+<!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -10,1510 +11,1508 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
+
 fbq('init', '1109589498194365');
 fbq('track', 'PageView');
 </script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1109589498194365&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-
-fbq('init', '1044726481809393');
-fbq('track', 'PageView');
-</script>
-
 <noscript>
 <img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1044726481809393&ev=PageView&noscript=1"/>
+src="https://www.facebook.com/tr?id=1109589498194365&ev=PageView&noscript=1"/>
 </noscript>
-<!-- =============== END META PIXEL =============== -->
-
-
-<meta charset="UTF-8">
-
-<meta name="viewport"
-content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-
-<meta name="theme-color" content="#050505">
-
-<meta name="description"
-content="Kamal Cricket Analyst - Match previews, player statistics, team updates and cricket analysis.">
-
-<title>Kamal Cricket Analyst™ | Cricket Analysis</title>
-
-
-<style>
-
-/* ==================================================
-   RESET
-================================================== */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html,
-body{
-    width:100%;
-    height:100%;
-    overflow:hidden;
-    background:#030303;
-    font-family:Arial,Helvetica,sans-serif;
-    color:#fff;
-}
-
-body{
-    min-height:100svh;
-}
-
-
-/* ==================================================
-   MAIN BACKGROUND
-================================================== */
-
-.page{
-
-    width:100%;
-    height:100svh;
-
-    position:relative;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    overflow:hidden;
-
-    background:
-
-    radial-gradient(
-        circle at 50% 0%,
-        rgba(255,120,0,.18),
-        transparent 28%
-    ),
-
-    radial-gradient(
-        circle at 10% 90%,
-        rgba(255,190,0,.10),
-        transparent 30%
-    ),
-
-    linear-gradient(
-        135deg,
-        #020202,
-        #0b0b0b 50%,
-        #030303
-    );
-}
-
-
-/* ==================================================
-   MOVING CRICKET BALLS
-================================================== */
-
-.balls{
-    position:absolute;
-    inset:0;
-    overflow:hidden;
-    pointer-events:none;
-    z-index:1;
-}
-
-.ball{
-    position:absolute;
-
-    width:22px;
-    height:22px;
-
-    border-radius:50%;
-
-    background:
-    radial-gradient(
-        circle at 35% 30%,
-        #ff5a4f,
-        #b80000 55%,
-        #420000
-    );
-
-    box-shadow:
-        0 0 12px rgba(255,45,25,.55);
-
-    opacity:.7;
-}
-
-
-/* ball seam */
-
-.ball:before{
-    content:"";
-
-    position:absolute;
-
-    width:70%;
-    height:70%;
-
-    top:15%;
-    left:15%;
-
-    border-top:2px dashed rgba(255,255,255,.7);
-    border-bottom:2px dashed rgba(255,255,255,.7);
-
-    border-radius:50%;
-
-    transform:rotate(45deg);
-}
-
-
-/* individual balls */
-
-.ball:nth-child(1){
-    left:5%;
-    bottom:-40px;
-    animation:ballMove1 12s linear infinite;
-}
-
-.ball:nth-child(2){
-    left:25%;
-    bottom:-60px;
-    width:16px;
-    height:16px;
-    animation:ballMove2 16s linear infinite;
-    animation-delay:2s;
-}
-
-.ball:nth-child(3){
-    left:48%;
-    bottom:-50px;
-    width:25px;
-    height:25px;
-    animation:ballMove3 14s linear infinite;
-    animation-delay:5s;
-}
-
-.ball:nth-child(4){
-    left:70%;
-    bottom:-40px;
-    width:18px;
-    height:18px;
-    animation:ballMove4 18s linear infinite;
-    animation-delay:1s;
-}
-
-.ball:nth-child(5){
-    left:90%;
-    bottom:-50px;
-    width:14px;
-    height:14px;
-    animation:ballMove5 13s linear infinite;
-    animation-delay:4s;
-}
-
-
-@keyframes ballMove1{
-
-    0%{
-        transform:
-        translateY(0)
-        translateX(0)
-        rotate(0deg);
-        opacity:0;
-    }
-
-    10%{
-        opacity:.7;
-    }
-
-    50%{
-        transform:
-        translateY(-55vh)
-        translateX(80px)
-        rotate(720deg);
-    }
-
-    100%{
-        transform:
-        translateY(-120vh)
-        translateX(-60px)
-        rotate(1440deg);
-        opacity:0;
-    }
-}
-
-
-@keyframes ballMove2{
-
-    0%{
-        transform:
-        translateY(0)
-        translateX(0)
-        rotate(0);
-        opacity:0;
-    }
-
-    15%{
-        opacity:.6;
-    }
-
-    50%{
-        transform:
-        translateY(-60vh)
-        translateX(-100px)
-        rotate(900deg);
-    }
-
-    100%{
-        transform:
-        translateY(-125vh)
-        translateX(70px)
-        rotate(1800deg);
-        opacity:0;
-    }
-}
-
-
-@keyframes ballMove3{
-
-    0%{
-        transform:
-        translateY(0)
-        translateX(0)
-        rotate(0);
-        opacity:0;
-    }
-
-    15%{
-        opacity:.75;
-    }
-
-    50%{
-        transform:
-        translateY(-55vh)
-        translateX(100px)
-        rotate(700deg);
-    }
-
-    100%{
-        transform:
-        translateY(-120vh)
-        translateX(-90px)
-        rotate(1500deg);
-        opacity:0;
-    }
-}
-
-
-@keyframes ballMove4{
-
-    0%{
-        transform:
-        translateY(0)
-        translateX(0)
-        rotate(0);
-        opacity:0;
-    }
-
-    15%{
-        opacity:.6;
-    }
-
-    50%{
-        transform:
-        translateY(-65vh)
-        translateX(-90px)
-        rotate(800deg);
-    }
-
-    100%{
-        transform:
-        translateY(-125vh)
-        translateX(100px)
-        rotate(1700deg);
-        opacity:0;
-    }
-}
-
-
-@keyframes ballMove5{
-
-    0%{
-        transform:
-        translateY(0)
-        translateX(0)
-        rotate(0);
-        opacity:0;
-    }
-
-    15%{
-        opacity:.65;
-    }
-
-    50%{
-        transform:
-        translateY(-50vh)
-        translateX(-70px)
-        rotate(700deg);
-    }
-
-    100%{
-        transform:
-        translateY(-120vh)
-        translateX(60px)
-        rotate(1500deg);
-        opacity:0;
-    }
-}
-
-
-/* ==================================================
-   MAIN CONTAINER
-================================================== */
-
-.container{
-
-    width:min(94%,520px);
-
-    height:calc(100svh - 14px);
-
-    max-height:780px;
-
-    position:relative;
-
-    z-index:5;
-}
-
-
-/* ==================================================
-   CARD
-================================================== */
-
-.card{
-
-    width:100%;
-    height:100%;
-
-    position:relative;
-
-    overflow:hidden;
-
-    padding:
-    clamp(12px,3vw,22px);
-
-    border-radius:28px;
-
-    border:
-    1px solid rgba(255,155,0,.22);
-
-    background:
-
-    linear-gradient(
-        145deg,
-        rgba(25,20,13,.96),
-        rgba(8,8,8,.97)
-    );
-
-    box-shadow:
-
-    0 30px 100px rgba(0,0,0,.8),
-
-    inset 0 1px 0
-    rgba(255,255,255,.06);
-}
-
-
-/* ==================================================
-   CARD GLOW
-================================================== */
-
-.card:before{
-
-    content:"";
-
-    position:absolute;
-
-    width:250px;
-    height:250px;
-
-    top:-150px;
-    right:-100px;
-
-    border-radius:50%;
-
-    background:
-    rgba(255,110,0,.12);
-
-    filter:blur(20px);
-
-    pointer-events:none;
-}
-
-
-/* ==================================================
-   TOP BAR
-================================================== */
-
-.top{
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
-
-    gap:10px;
-}
-
-
-.badge{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:7px;
-
-    padding:9px 13px;
-
-    border-radius:999px;
-
-    font-size:9px;
-
-    font-weight:900;
-
-    letter-spacing:.8px;
-
-    color:#ffdca5;
-
-    background:
-    rgba(255,126,0,.08);
-
-    border:
-    1px solid rgba(255,153,0,.25);
-}
-
-
-.dot{
-
-    width:7px;
-    height:7px;
-
-    border-radius:50%;
-
-    background:#ff9d00;
-
-    box-shadow:
-    0 0 14px #ff7900;
-
-    animation:
-    livePulse 1.5s infinite;
-}
-
-
-@keyframes livePulse{
-
-    0%,100%{
-        transform:scale(1);
-        opacity:1;
-    }
-
-    50%{
-        transform:scale(.65);
-        opacity:.45;
-    }
-}
-
-
-.logo{
-
-    width:51px;
-    height:51px;
-
-    border-radius:16px;
-
-    object-fit:cover;
-
-    border:
-    2px solid #ff9b22;
-
-    box-shadow:
-    0 0 25px rgba(255,125,0,.28);
-}
-
-
-/* ==================================================
-   HERO
-================================================== */
-
-.hero{
-
-    text-align:center;
-
-    padding:
-    clamp(10px,2.5vh,20px)
-    4px 0;
-}
-
-
-.kicker{
-
-    font-size:8px;
-
-    font-weight:900;
-
-    letter-spacing:2.2px;
-
-    color:#ffb52e;
-
-    margin-bottom:7px;
-}
-
-
-h1{
-
-    font-size:
-    clamp(28px,9vw,43px);
-
-    line-height:.94;
-
-    letter-spacing:-1.5px;
-
-    font-weight:950;
-}
-
-
-h1 span{
-
-    display:block;
-
-    background:
-    linear-gradient(
-        90deg,
-        #ff7a00,
-        #ffd000,
-        #ff5c00
-    );
-
-    -webkit-background-clip:text;
-
-    background-clip:text;
-
-    color:transparent;
-}
-
-
-.subtitle{
-
-    max-width:420px;
-
-    margin:
-    9px auto 0;
-
-    color:#aaa;
-
-    font-size:10.5px;
-
-    line-height:1.5;
-}
-
-
-/* ==================================================
-   FEATURE BAR
-================================================== */
-
-.features{
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(4,1fr);
-
-    gap:6px;
-
-    margin-top:11px;
-}
-
-
-.feature{
-
-    padding:8px 3px;
-
-    text-align:center;
-
-    border-radius:12px;
-
-    background:
-    rgba(255,255,255,.035);
-
-    border:
-    1px solid rgba(255,255,255,.07);
-
-    color:#ddd;
-
-    font-size:7px;
-
-    font-weight:800;
-}
-
-
-.feature strong{
-
-    display:block;
-
-    font-size:14px;
-
-    margin-bottom:3px;
-}
-
-
-/* ==================================================
-   INFORMATION GRID
-================================================== */
-
-.content{
-
-    display:grid;
-
-    grid-template-columns:
-    1fr 1fr;
-
-    gap:7px;
-
-    margin-top:10px;
-}
-
-
-.info{
-
-    padding:9px;
-
-    border-radius:15px;
-
-    background:
-
-    linear-gradient(
-        145deg,
-        rgba(50,36,18,.52),
-        rgba(15,12,8,.58)
-    );
-
-    border:
-    1px solid rgba(255,170,50,.11);
-}
-
-
-.info-number{
-
-    font-size:17px;
-
-    font-weight:950;
-
-    color:#ffad24;
-}
-
-
-.info-title{
-
-    margin-top:2px;
-
-    font-size:9px;
-
-    font-weight:900;
-}
-
-
-.info-text{
-
-    margin-top:3px;
-
-    color:#858585;
-
-    font-size:7px;
-
-    line-height:1.35;
-}
-
-
-/* ==================================================
-   ANALYSIS PANEL
-================================================== */
-
-.panel{
-
-    margin-top:9px;
-
-    padding:9px 11px;
-
-    border-radius:16px;
-
-    background:
-    rgba(255,255,255,.035);
-
-    border:
-    1px solid rgba(255,255,255,.075);
-}
-
-
-.panel-title{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:7px;
-
-    font-size:9px;
-
-    font-weight:900;
-
-    margin-bottom:5px;
-}
-
-
-.panel-icon{
-
-    width:19px;
-    height:19px;
-
-    display:grid;
-
-    place-items:center;
-
-    border-radius:6px;
-
-    background:
-    rgba(255,145,0,.1);
-
-    color:#ffad27;
-}
-
-
-.point{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:7px;
-
-    padding:3.5px 0;
-
-    font-size:7.5px;
-
-    color:#c5c5c5;
-
-    border-bottom:
-    1px solid rgba(255,255,255,.05);
-}
-
-
-.point:last-child{
-    border-bottom:0;
-}
-
-
-.tick{
-
-    width:15px;
-    height:15px;
-
-    flex:none;
-
-    display:grid;
-
-    place-items:center;
-
-    border-radius:5px;
-
-    color:#ffad27;
-
-    background:
-    rgba(255,145,0,.08);
-}
-
-
-/* ==================================================
-   BIG CTA BUTTON
-================================================== */
-
-.cta{
-
-    position:relative;
-
-    display:flex;
-
-    flex-direction:column;
-
-    align-items:center;
-
-    justify-content:center;
-
-    width:100%;
-
-    min-height:72px;
-
-    margin-top:11px;
-
-    padding:12px;
-
-    text-decoration:none;
-
-    overflow:hidden;
-
-    border-radius:18px;
-
-    color:#111;
-
-    font-size:
-    clamp(14px,4.2vw,17px);
-
-    font-weight:950;
-
-    letter-spacing:.3px;
-
-    background:
-
-    linear-gradient(
-        100deg,
-        #ff7a00,
-        #ffc400,
-        #ffea55,
-        #ff7a00
-    );
-
-    background-size:300% 100%;
-
-    box-shadow:
-
-    0 12px 35px
-    rgba(255,130,0,.35),
-
-    0 0 35px
-    rgba(255,174,0,.18);
-
-    animation:
-
-    buttonGradient 3.5s ease infinite,
-
-    buttonBounce 2s ease-in-out infinite;
-}
-
-
-/* BUTTON SHINE */
-
-.cta:before{
-
-    content:"";
-
-    position:absolute;
-
-    top:0;
-
-    left:-120%;
-
-    width:75%;
-
-    height:100%;
-
-    background:
-
-    linear-gradient(
-        90deg,
-        transparent,
-        rgba(255,255,255,.65),
-        transparent
-    );
-
-    transform:skewX(-22deg);
-
-    animation:
-    buttonShine 2.7s infinite;
-}
-
-
-/* BUTTON BORDER GLOW */
-
-.cta:after{
-
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    border-radius:18px;
-
-    border:
-    2px solid
-    rgba(255,255,255,.28);
-
-    pointer-events:none;
-}
-
-
-.cta-text,
-.cta small{
-
-    position:relative;
-
-    z-index:3;
-}
-
-
-.cta small{
-
-    margin-top:5px;
-
-    font-size:7px;
-
-    font-weight:900;
-
-    letter-spacing:1px;
-
-    opacity:.65;
-}
-
-
-@keyframes buttonGradient{
-
-    0%,100%{
-        background-position:0% 50%;
-    }
-
-    50%{
-        background-position:100% 50%;
-    }
-}
-
-
-@keyframes buttonBounce{
-
-    0%,100%{
-        transform:scale(1);
-    }
-
-    50%{
-        transform:scale(1.025);
-    }
-}
-
-
-@keyframes buttonShine{
-
-    0%{
-        left:-120%;
-    }
-
-    45%,100%{
-        left:140%;
-    }
-}
-
-
-/* ==================================================
-   DISCLAIMER
-================================================== */
-
-.disclaimer{
-
-    margin:
-    6px 5px 0;
-
-    text-align:center;
-
-    color:#5f5f5f;
-
-    font-size:6.8px;
-
-    line-height:1.35;
-}
-
-
-.footer{
-
-    text-align:center;
-
-    margin-top:4px;
-
-    color:#484848;
-
-    font-size:6.5px;
-}
-
-
-/* ==================================================
-   SMALL MOBILE
-================================================== */
-
-@media(max-width:380px){
-
-    .container{
-
-        width:95%;
-
-        height:
-        calc(100svh - 10px);
-    }
-
-
-    .card{
-
-        padding:10px;
-
-        border-radius:23px;
-    }
-
-
-    .logo{
-
-        width:46px;
-        height:46px;
-    }
-
-
-    .hero{
-
-        padding-top:8px;
-    }
-
-
-    h1{
-
-        font-size:27px;
-    }
-
-
-    .subtitle{
-
-        font-size:9px;
-
-        margin-top:7px;
-    }
-
-
-    .features{
-
-        margin-top:8px;
-    }
-
-
-    .feature{
-
-        padding:6px 2px;
-
-        font-size:6.5px;
-    }
-
-
-    .feature strong{
-
-        font-size:13px;
-    }
-
-
-    .content{
-
-        margin-top:7px;
-    }
-
-
-    .info{
-
-        padding:8px;
-    }
-
-
-    .panel{
-
-        margin-top:7px;
-
-        padding:7px 9px;
-    }
-
-
-    .cta{
-
-        min-height:65px;
-
-        margin-top:8px;
-    }
-
-
-    .disclaimer{
-
-        margin-top:4px;
-
-        font-size:6.3px;
-    }
-}
-
-
-/* ==================================================
-   VERY SHORT SCREEN
-================================================== */
-
-@media(max-height:680px){
-
-    .hero{
-
-        padding-top:6px;
-    }
-
-
-    .features{
-
-        margin-top:6px;
-    }
-
-
-    .content{
-
-        margin-top:6px;
-    }
-
-
-    .panel{
-
-        margin-top:6px;
-
-        padding:6px 9px;
-    }
-
-
-    .point{
-
-        padding:2.5px 0;
-    }
-
-
-    .cta{
-
-        margin-top:6px;
-
-        min-height:58px;
-    }
-
-
-    .disclaimer{
-
-        margin-top:3px;
-    }
-}
-
-</style>
-
-</head>
-
-
-<body>
-
-
-<main class="page">
-
-
-<!-- ==================================================
-     MOVING BALLS
-================================================== -->
-
-<div class="balls">
-
-    <div class="ball"></div>
-    <div class="ball"></div>
-    <div class="ball"></div>
-    <div class="ball"></div>
-    <div class="ball"></div>
-
-</div>
-
-
-<!-- ==================================================
-     MAIN CARD
-================================================== -->
-
-<div class="container">
-
-<section class="card">
-
-
-<!-- TOP -->
-
-<div class="top">
-
-    <div class="badge">
-        <span class="dot"></span>
-        CRICKET ANALYSIS HUB
-    </div>
-
-    <img
-        src="./logo.jpg"
-        class="logo"
-        alt="Kamal Cricket Analyst Logo">
-
-</div>
-
-
-<!-- HERO -->
-
-<div class="hero">
-
-    <div class="kicker">
-        SMART • SIMPLE • INFORMATIVE
-    </div>
-
-    <h1>
-        KAMAL
-        <span>CRICKET ANALYST™</span>
-    </h1>
-
-    <p class="subtitle">
-        Match previews, player form, team updates,
-        key statistics and cricket information —
-        presented in a simple format.
-    </p>
-
-</div>
-
-
-<!-- FEATURES -->
-
-<div class="features">
-
-    <div class="feature">
-        <strong>🏏</strong>
-        MATCH
-    </div>
-
-    <div class="feature">
-        <strong>📊</strong>
-        STATS
-    </div>
-
-    <div class="feature">
-        <strong>👥</strong>
-        TEAMS
-    </div>
-
-    <div class="feature">
-        <strong>⚡</strong>
-        UPDATES
-    </div>
-
-</div>
-
-
-<!-- INFORMATION -->
-
-<div class="content">
-
-
-    <div class="info">
-
-        <div class="info-number">
-            01
-        </div>
-
-        <div class="info-title">
-            Match Preview
-        </div>
-
-        <div class="info-text">
-            Key match factors, conditions
-            and important information.
-        </div>
-
-    </div>
-
-
-    <div class="info">
-
-        <div class="info-number">
-            02
-        </div>
-
-        <div class="info-title">
-            Team News
-        </div>
-
-        <div class="info-text">
-            Squads, combinations and
-            relevant team updates.
-        </div>
-
-    </div>
-
-
-    <div class="info">
-
-        <div class="info-number">
-            03
-        </div>
-
-        <div class="info-title">
-            Player Form
-        </div>
-
-        <div class="info-text">
-            Recent performances and
-            useful player statistics.
-        </div>
-
-    </div>
-
-
-    <div class="info">
-
-        <div class="info-number">
-            04
-        </div>
-
-        <div class="info-title">
-            Match Updates
-        </div>
-
-        <div class="info-text">
-            Important cricket-related
-            information and updates.
-        </div>
-
-    </div>
-
-</div>
-
-
-<!-- ANALYSIS PANEL -->
-
-<div class="panel">
-
-    <div class="panel-title">
-
-        <div class="panel-icon">
-            ✓
-        </div>
-
-        WHAT YOU CAN EXPECT
-
-    </div>
-
-
-    <div class="point">
-
-        <div class="tick">
-            ✓
-        </div>
-
-        Team & player information
-
-    </div>
-
-
-    <div class="point">
-
-        <div class="tick">
-            ✓
-        </div>
-
-        Recent form and match statistics
-
-    </div>
-
-
-    <div class="point">
-
-        <div class="tick">
-            ✓
-        </div>
-
-        Match-related analysis & updates
-
-    </div>
-
-</div>
-
-
-<!-- ==================================================
-     BIG ANIMATED BUTTON
-================================================== -->
-
-<a
-    class="cta"
-    href="https://t.me/+-k2TXkKdo11lODc1"
-    target="_blank"
-    rel="noopener noreferrer"
-    onclick="trackTelegramClick()">
-
-    <span class="cta-text">
-        🏏 JOIN KAMAL CRICKET ANALYST →
-    </span>
-
-    <small>
-        OPEN TELEGRAM • CRICKET ANALYSIS & UPDATES
-    </small>
-
-</a>
-
-
-<!-- DISCLAIMER -->
-
-<p class="disclaimer">
-
-    For general informational and entertainment purposes only.
-    Match information may change. Verify important details
-    through official cricket sources.
-
-</p>
-
-
-<div class="footer">
-
-    © 2026 KAMAL CRICKET ANALYST™
-
-</div>
-
-
-</section>
-
-</div>
-
-</main>
-
-
-<!-- ==================================================
-     TELEGRAM CLICK TRACKING
-================================================== -->
-
-<script>
-
-function trackTelegramClick(){
-
-    if(typeof fbq === "function"){
-
-        fbq(
-            'track',
-            'Contact',
-            {
-                content_name:
-                'Kamal Cricket Analyst Telegram',
-
-                content_category:
-                'Cricket Analysis'
-            }
-        );
-
-    }
-
-}
-
+<!-- End Meta Pixel Code -->
+                                                                            
+                                                  
+                                                                                                      
+                                                                                                      
+ <meta charset="UTF-8">                                                                                  
+                                                                                                      
+ <meta name="viewport"                                                                                   
+ content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">                           
+                                                                                                      
+ <meta name="theme-color" content="#050505">                                                             
+                                                                                                      
+ <meta name="description"                                                                                
+ content="Kamal Cricket Analyst - Match previews, player statistics, team updates and cricket analysis."> 
+                                                                                                      
+ <title>Kamal Cricket Analyst™ \| Cricket Analysis</title>                                              
+                                                                                                      
+                                                                                                      
+ <style>                                                                                                 
+                                                                                                      
+ /* ==================================================                                                   
+    RESET                                                                                                 
+ ================================================== */                                                   
+                                                                                                      
+ *{                                                                                                      
+     margin:0;                                                                                            
+     padding:0;                                                                                           
+     box-sizing:border-box;                                                                              
+ }                                                                                                        
+                                                                                                      
+ html,                                                                                                    
+ body{                                                                                                    
+     width:100%;                                                                                          
+     height:100%;                                                                                         
+     overflow:hidden;                                                                                    
+     background:#030303;                                                                                  
+     font-family:Arial,Helvetica,sans-serif;                                                             
+     color:#fff;                                                                                          
+ }                                                                                                        
+                                                                                                      
+ body{                                                                                                    
+     min-height:100svh;                                                                                   
+ }                                                                                                        
+                                                                                                      
+                                                                                                      
+ /* ==================================================                                                   
+    MAIN BACKGROUND                                                                                       
+ ================================================== */                                                   
+                                                                                                      
+ .page{                                                                                                   
+                                                                                                      
+     width:100%;                                                                                          
+     height:100svh;                                                                                       
+                                                                                                      
+     position:relative;                                                                                  
+                                                                                                      
+     display:flex;                                                                                       
+     justify-content:center;                                                                             
+     align-items:center;                                                                                 
+                                                                                                      
+     overflow:hidden;                                                                                    
+                                                                                                      
+     background:                                                                                          
+                                                                                                      
+     radial-gradient(                                                                                     
+         circle at 50% 0%,                                                                                
+         rgba(255,120,0,.18),                                                                             
+         transparent 28%                                                                                  
+     ),                                                                                                   
+                                                                                                      
+     radial-gradient(                                                                                     
+         circle at 10% 90%,                                                                               
+         rgba(255,190,0,.10),                                                                             
+         transparent 30%                                                                                  
+     ),                                                                                                   
+                                                                                                      
+     linear-gradient(                                                                                     
+         135deg,                                                                                          
+         #020202,                                                                                         
+         #0b0b0b 50%,                                                                                     
+         #030303                                                                                          
+     );                                                                                                   
+ }                                                                                                        
+                                                                                                      
+                                                                                                      
+ /* ==================================================                                                   
+    MOVING CRICKET BALLS                                                                                  
+ ================================================== */                                                   
+                                                                                                      
+ .balls{                                                                                                  
+     position:absolute;                                                                                  
+     inset:0;                                                                                             
+     overflow:hidden;                                                                                    
+     pointer-events:none;                                                                                
+     z-index:1;                                                                                           
+ }                                                                                                        
+                                                                                                      
+ .ball{                                                                                                   
+     position:absolute;                                                                                  
+                                                                                                      
+     width:22px;                                                                                          
+     height:22px;                                                                                         
+                                                                                                      
+     border-radius:50%;                                                                                   
+                                                                                                      
+     background:                                                                                          
+     radial-gradient(                                                                                     
+         circle at 35% 30%,                                                                               
+         #ff5a4f,                                                                                         
+         #b80000 55%,                                                                                     
+         #420000                                                                                          
+     );                                                                                                   
+                                                                                                      
+     box-shadow:                                                                                          
+         0 0 12px rgba(255,45,25,.55);                                                                    
+                                                                                                      
+     opacity:.7;                                                                                          
+ }                                                                                                        
+                                                                                                      
+                                                                                                      
+ /* ball seam */                                                                                        
+                                                                                                      
+ .ball:before{                                                                                           
+     content:"";                                                                                          
+                                                                                                      
+     position:absolute;                                                                                  
+                                                                                                      
+     width:70%;                                                                                           
+     height:70%;                                                                                          
+                                                                                                      
+     top:15%;                                                                                             
+     left:15%;                                                                                            
+                                                                                                      
+     border-top:2px dashed rgba(255,255,255,.7);                                                          
+     border-bottom:2px dashed rgba(255,255,255,.7);                                                       
+                                                                                                      
+     border-radius:50%;                                                                                   
+                                                                                                      
+     transform:rotate(45deg);                                                                            
+ }                                                                                                        
+                                                                                                      
+                                                                                                      
+ /* individual balls */                                                                                 
+                                                                                                      
+ .ball:nth-child(1){                                                                                     
+     left:5%;                                                                                             
+     bottom:-40px;                                                                                        
+     animation:ballMove1 12s linear infinite;                                                            
+ }                                                                                                        
+                                                                                                      
+ .ball:nth-child(2){                                                                                     
+     left:25%;                                                                                            
+     bottom:-60px;                                                                                        
+     width:16px;                                                                                          
+     height:16px;                                                                                         
+     animation:ballMove2 16s linear infinite;                                                            
+     animation-delay:2s;                                                                                  
+ }                                                                                                        
+                                                                                                      
+ .ball:nth-child(3){                                                                                     
+     left:48%;                                                                                            
+     bottom:-50px;                                                                                        
+     width:25px;                                                                                          
+     height:25px;                                                                                         
+     animation:ballMove3 14s linear infinite;                                                            
+     animation-delay:5s;                                                                                  
+ }                                                                                                        
+                                                                                                      
+ .ball:nth-child(4){                                                                                     
+     left:70%;                                                                                            
+     bottom:-40px;                                                                                        
+     width:18px;                                                                                          
+     height:18px;                                                                                         
+     animation:ballMove4 18s linear infinite;                                                            
+     animation-delay:1s;                                                                                  
+ }                                                                                                        
+                                                                                                      
+ .ball:nth-child(5){                                                                                     
+     left:90%;                                                                                            
+     bottom:-50px;                                                                                        
+     width:14px;                                                                                          
+     height:14px;                                                                                         
+     animation:ballMove5 13s linear infinite;                                                            
+     animation-delay:4s;                                                                                  
+ }                                                                                                        
+                                                                                                      
+                                                                                                      
+ @keyframes ballMove1{                                                                                    
+                                                                                                      
+     0%{                                                                                                  
+         transform:                                                                                       
+         translateY(0)                                                                                    
+         translateX(0)                                                                                    
+         rotate(0deg);                                                                                    
+         opacity:0;                                                                                       
+     }                                                                                                    
+                                                                                                      
+     10%{                                                                                                 
+         opacity:.7;                                                                                      
+     }                                                                                                    
+                                                                                                      
+     50%{                                                                                                 
+         transform:                                                                                       
+         translateY(-55vh)                                                                                
+         translateX(80px)                                                                                 
+         rotate(720deg);                                                                                  
+     }                                                                                                    
+                                                                                                      
+     100%{                                                                                                
+         transform:                                                                                       
+         translateY(-120vh)                                                                               
+         translateX(-60px)                                                                                
+         rotate(1440deg);                                                                                 
+         opacity:0;                                                                                       
+     }                                                                                                    
+ }                                                                                                        
+                                                                                                      
+                                                                                                      
+ @keyframes ballMove2{                                                                                    
+                                                                                                      
+     0%{                                                                                                  
+         transform:                                                                                       
+         translateY(0)                                                                                    
+         translateX(0)                                                                                    
+         rotate(0);                                                                                       
+         opacity:0;                                                                                       
+     }                                                                                                    
+                                                                                                      
+     15%{                                                                                                 
+         opacity:.6;                                                                                      
+     }                                                                                                    
+                                                                                                      
+     50%{                                                                                                 
+         transform:                                                                                       
+         translateY(-60vh)                                                                                
+         translateX(-100px)                                                                               
+         rotate(900deg);                                                                                  
+     }                                                                                                    
+                                                                                                      
+     100%{                                                                                                
+         transform:                                                                                       
+         translateY(-125vh)                                                                               
+         translateX(70px)                                                                                 
+         rotate(1800deg);                                                                                 
+         opacity:0;                                                                                       
+     }                                                                                                    
+ }                                                                                                        
+                                                                                                      
+                                                                                                      
+ @keyframes ballMove3{                                                                                    
+                                                                                                      
+     0%{                                                                                                  
+         transform:                                                                                       
+         translateY(0)                                                                                    
+         translateX(0)                                                                                    
+         rotate(0);                                                                                       
+         opacity:0;                                                                                       
+     }                                                                                                    
+                                                                                                      
+     15%{                                                                                                 
+         opacity:.75;                                                                                     
+     }                                                                                                    
+                                                                                                      
+     50%{                                                                                                 
+         transform:                                                                                       
+         translateY(-55vh)                                                                                
+         translateX(100px)                                                                                
+         rotate(700deg);                                                                                  
+     }                                                                                                    
+                                                                                                      
+     100%{                                                                                                
+         transform:                                                                                       
+         translateY(-120vh)                                                                               
+         translateX(-90px)                                                                                
+         rotate(1500deg);                                                                                 
+         opacity:0;                                                                                       
+     }                                                                                                    
+ }                                                                                                        
+                                                                                                      
+                                                                                                      
+ @keyframes ballMove4{                                                                                    
+                                                                                                      
+     0%{                                                                                                  
+         transform:                                                                                       
+         translateY(0)                                                                                    
+         translateX(0)                                                                                    
+         rotate(0);                                                                                       
+         opacity:0;                                                                                       
+     }                                                                                                    
+                                                                                                      
+     15%{                                                                                                 
+         opacity:.6;                                                                                      
+     }                                                                                                    
+                                                                                                      
+     50%{                                                                                                 
+         transform:                                                                                       
+         translateY(-65vh)                                                                                
+         translateX(-90px)                                                                                
+         rotate(800deg);                                                                                  
+     }                                                                                                    
+                                                                                                      
+     100%{                                                                                                
+         transform:                                                                                       
+         translateY(-125vh)                                                                               
+         translateX(100px)                                                                                
+         rotate(1700deg);                                                                                 
+         opacity:0;                                                                                       
+     }                                                                                                    
+ }                                                                                                        
+                                                                                                      
+                                                                                                      
+ @keyframes ballMove5{                                                                                    
+                                                                                                      
+     0%{                                                                                                  
+         transform:                                                                                       
+         translateY(0)                                                                                    
+         translateX(0)                                                                                    
+         rotate(0);                                                                                       
+         opacity:0;                                                                                       
+     }                                                                                                    
+                                                                                                      
+     15%{                                                                                                 
+         opacity:.65;                                                                                     
+     }                                                                                                    
+                                                                                                      
+     50%{                                                                                                 
+         transform:                                                                                       
+         translateY(-50vh)                                                                                
+         translateX(-70px)                                                                                
+         rotate(700deg);                                                                                  
+     }                                                                                                    
+                                                                                                      
+     100%{                                                                                                
+         transform:                                                                                       
+         translateY(-120vh)                                                                               
+         translateX(60px)                                                                                 
+         rotate(1500deg);                                                                                 
+         opacity:0;                                                                                       
+     }                                                                                                    
+ }                                                                                                        
+                                                                                                      
+                                                                                                      
+ /* ==================================================                                                   
+    MAIN CONTAINER                                                                                        
+ ================================================== */                                                   
+                                                                                                      
+ .container{                                                                                              
+                                                                                                      
+     width:min(94%,520px);                                                                               
+                                                                                                      
+     height:calc(100svh - 14px);                                                                         
+                                                                                                      
+     max-height:780px;                                                                                    
+                                                                                                      
+     position:relative;                                                                                  
+                                                                                                      
+     z-index:5;                                                                                           
+ }                                                                                                        
+                                                                                                      
+                                                                                                      
+ /* ==================================================                                                   
+    CARD                                                                                                  
+ ================================================== */                                                   
+                                                                                                      
+ .card{                                                                                                   
+                                                                                                      
+     width:100%;                                                                                          
+     height:100%;                                                                                         
+                                                                                                      
+     position:relative;                                                                                  
+                                                                                                      
+     overflow:hidden;                                                                                    
+                                                                                                      
+     padding:                                                                                             
+     clamp(12px,3vw,22px);                                                                                
+                                                                                                      
+     border-radius:28px;                                                                                  
+                                                                                                      
+     border:                                                                                              
+     1px solid rgba(255,155,0,.22);                                                                       
+                                                                                                      
+     background:                                                                                          
+                                                                                                      
+     linear-gradient(                                                                                     
+         145deg,                                                                                          
+         rgba(25,20,13,.96),                                                                              
+         rgba(8,8,8,.97)                                                                                  
+     );                                                                                                   
+                                                                                                      
+     box-shadow:                                                                                          
+                                                                                                      
+     0 30px 100px rgba(0,0,0,.8),                                                                         
+                                                                                                      
+     inset 0 1px 0                                                                                        
+     rgba(255,255,255,.06);                                                                               
+ }                                                                                                        
+                                                                                                      
+                                                                                                      
+ /* ==================================================                                                   
+    CARD GLOW                                                                                             
+ ================================================== */                                                   
+                                                                                                      
+ .card:before{                                                                                           
+                                                                                                      
+     content:"";                                                                                          
+                                                                                                      
+     position:absolute;                                                                                  
+                                                                                                      
+     width:250px;                                                                                         
+     height:250px;                                                                                        
+                                                                                                      
+     top:-150px;                                                                                          
+     right:-100px;                                                                                        
+                                                                                                      
+     border-radius:50%;                                                                                   
+                                                                                                      
+     background:                                                                                          
+     rgba(255,110,0,.12);                                                                                 
+                                                                                                      
+     filter:blur(20px);                                                                                  
+                                                                                                      
+     pointer-events:none;                                                                                
+ }                                                                                                        
+                                                                                                      
+                                                                                                      
+ /* ==================================================                                                   
+    TOP BAR                                                                                               
+ ================================================== */                                                   
+                                                                                                      
+ .top{                                                                                                    
+                                                                                                      
+     display:flex;                                                                                       
+                                                                                                      
+     align-items:center;                                                                                 
+                                                                                                      
+     justify-content:space-between;                                                                      
+                                                                                                      
+     gap:10px;                                                                                            
+ }                                                                                                        
+                                                                                                      
+                                                                                                      
+ .badge{                                                                                                  
+                                                                                                      
+     display:flex;                                                                                       
+                                                                                                      
+     align-items:center;                                                                                 
+                                                                                                      
+     gap:7px;                                                                                             
+                                                                                                      
+     padding:9px 13px;                                                                                    
+                                                                                                      
+     border-radius:999px;                                                                                 
+                                                                                                      
+     font-size:9px;                                                                                       
+                                                                                                      
+     font-weight:900;                                                                                     
+                                                                                                      
+     letter-spacing:.8px;                                                                                 
+                                                                                                      
+     color:#ffdca5;                                                                                       
+                                                                                                      
+     background:                                                                                          
+     rgba(255,126,0,.08);                                                                                 
+                                                                                                      
+     border:                                                                                              
+     1px solid rgba(255,153,0,.25);                                                                       
+ }                                                                                                        
+                                                                                                      
+                                                                                                      
+ .dot{                                                                                                    
+                                                                                                      
+     width:7px;                                                                                           
+     height:7px;                                                                                          
+                                                                                                      
+     border-radius:50%;                                                                                   
+                                                                                                      
+     background:#ff9d00;                                                                                  
+                                                                                                      
+     box-shadow:                                                                                          
+     0 0 14px #ff7900;                                                                                    
+                                                                                                      
+     animation:                                                                                           
+     livePulse 1.5s infinite;                                                                             
+ }                                                                                                        
+                                                                                                      
+                                                                                                      
+ @keyframes livePulse{                                                                                    
+                                                                                                      
+     0%,100%{                                                                                             
+         transform:scale(1);                                                                             
+         opacity:1;                                                                                       
+     }                                                                                                    
+                                                                                                      
+     50%{                                                                                                 
+         transform:scale(.65);                                                                           
+         opacity:.45;                                                                                     
+     }                                                                                                    
+ }                                                                                                        
+                                                                                                      
+                                                                                                      
+ .logo{                                                                                                   
+                                                                                                      
+     width:51px;                                                                                          
+     height:51px;                                                                                         
+                                                                                                      
+     border-radius:16px;                                                                                  
+                                                                                                      
+     object-fit:cover;                                                                                   
+                                                                                                      
+     border:                                                                                              
+     2px solid #ff9b22;                                                                                   
+                                                                                                      
+     box-shadow:                                                                                          
+     0 0 25px rgba(255,125,0,.28);                                                                        
+ }                                                                                                        
+                                                                                                      
+                                                                                                      
+ /* ==================================================                                                   
+    HERO                                                                                                  
+ ================================================== */                                                   
+                                                                                                      
+ .hero{                                                                                                   
+                                                                                                      
+     text-align:center;                                                                                  
+                                                                                                      
+     padding:                                                                                             
+     clamp(10px,2.5vh,20px)                                                                               
+     4px 0;                                                                                               
+ }                                                                                                        
+                                                                                                      
+                                                                                                      
+ .kicker{                                                                                                 
+                                                                                                      
+     font-size:8px;                                                                                       
+                                                                                                      
+     font-weight:900;                                                                                     
+                                                                                                      
+     letter-spacing:2.2px;                                                                                
+                                                                                                      
+     color:#ffb52e;                                                                                       
+                                                                                                      
+     margin-bottom:7px;                                                                                   
+ }                                                                                                        
+                                                                                                      
+                                                                                                      
+ h1{                                                                                                      
+                                                                                                      
+     font-size:                                                                                           
+     clamp(28px,9vw,43px);                                                                                
+                                                                                                      
+     line-height:.94;                                                                                     
+                                                                                                      
+     letter-spacing:-1.5px;                                                                               
+                                                                                                      
+     font-weight:950;                                                                                     
+ }                                                                                                        
+                                                                                                      
+                                                                                                      
+ h1 span{                                                                                                 
+                                                                                                      
+     display:block;                                                                                      
+                                                                                                      
+     background:                                                                                          
+     linear-gradient(                                                                                     
+         90deg,                                                                                           
+         #ff7a00,                                                                                         
+         #ffd000,                                                                                         
+         #ff5c00                                                                                          
+     );                                                                                                   
+                                                                                                      
+     -webkit-background-clip:text;                                                                       
+                                                                                                      
+     background-clip:text;                                                                               
+                                                                                                      
+     color:transparent;                                                                                  
+ }                                                                                                        
+                                                                                                      
+                                                                                                      
+ .subtitle{                                                                                               
+                                                                                                      
+     max-width:420px;                                                                                     
+                                                                                                      
+     margin:                                                                                              
+     9px auto 0;                                                                                          
+                                                                                                      
+     color:#aaa;                                                                                          
+                                                                                                      
+     font-size:10.5px;                                                                                    
+                                                                                                      
+     line-height:1.5;                                                                                     
+ }                                                                                                        
+                                                                                                      
+                                                                                                      
+ /* ==================================================                                                   
+    FEATURE BAR                                                                                           
+ ================================================== */                                                   
+                                                                                                      
+ .features{                                                                                               
+                                                                                                      
+     display:grid;                                                                                       
+                                                                                                      
+     grid-template-columns:                                                                               
+     repeat(4,1fr);                                                                                       
+                                                                                                      
+     gap:6px;                                                                                             
+                                                                                                      
+     margin-top:11px;                                                                                     
+ }                                                                                                        
+                                                                                                      
+                                                                                                      
+ .feature{                                                                                                
+                                                                                                      
+     padding:8px 3px;                                                                                     
+                                                                                                      
+     text-align:center;                                                                                  
+                                                                                                      
+     border-radius:12px;                                                                                  
+                                                                                                      
+     background:                                                                                          
+     rgba(255,255,255,.035);                                                                              
+                                                                                                      
+     border:                                                                                              
+     1px solid rgba(255,255,255,.07);                                                                     
+                                                                                                      
+     color:#ddd;                                                                                          
+                                                                                                      
+     font-size:7px;                                                                                       
+                                                                                                      
+     font-weight:800;                                                                                     
+ }                                                                                                        
+                                                                                                      
+                                                                                                      
+ .feature strong{                                                                                         
+                                                                                                      
+     display:block;                                                                                      
+                                                                                                      
+     font-size:14px;                                                                                      
+                                                                                                      
+     margin-bottom:3px;                                                                                   
+ }                                                                                                        
+                                                                                                      
+                                                                                                      
+ /* ==================================================                                                   
+    INFORMATION GRID                                                                                      
+ ================================================== */                                                   
+                                                                                                      
+ .content{                                                                                                
+                                                                                                      
+     display:grid;                                                                                       
+                                                                                                      
+     grid-template-columns:                                                                               
+     1fr 1fr;                                                                                             
+                                                                                                      
+     gap:7px;                                                                                             
+                                                                                                      
+     margin-top:10px;                                                                                     
+ }                                                                                                        
+                                                                                                      
+                                                                                                      
+ .info{                                                                                                   
+                                                                                                      
+     padding:9px;                                                                                         
+                                                                                                      
+     border-radius:15px;                                                                                  
+                                                                                                      
+     background:                                                                                          
+                                                                                                      
+     linear-gradient(                                                                                     
+         145deg,                                                                                          
+         rgba(50,36,18,.52),                                                                              
+         rgba(15,12,8,.58)                                                                                
+     );                                                                                                   
+                                                                                                      
+     border:                                                                                              
+     1px solid rgba(255,170,50,.11);                                                                      
+ }                                                                                                        
+                                                                                                      
+                                                                                                      
+ .info-number{                                                                                            
+                                                                                                      
+     font-size:17px;                                                                                      
+                                                                                                      
+     font-weight:950;                                                                                     
+                                                                                                      
+     color:#ffad24;                                                                                       
+ }                                                                                                        
+                                                                                                      
+                                                                                                      
+ .info-title{                                                                                             
+                                                                                                      
+     margin-top:2px;                                                                                      
+                                                                                                      
+     font-size:9px;                                                                                       
+                                                                                                      
+     font-weight:900;                                                                                     
+ }                                                                                                        
+                                                                                                      
+                                                                                                      
+ .info-text{                                                                                              
+                                                                                                      
+     margin-top:3px;                                                                                      
+                                                                                                      
+     color:#858585;                                                                                       
+                                                                                                      
+     font-size:7px;                                                                                       
+                                                                                                      
+     line-height:1.35;                                                                                    
+ }                                                                                                        
+                                                                                                      
+                                                                                                      
+ /* ==================================================                                                   
+    ANALYSIS PANEL                                                                                        
+ ================================================== */                                                   
+                                                                                                      
+ .panel{                                                                                                  
+                                                                                                      
+     margin-top:9px;                                                                                      
+                                                                                                      
+     padding:9px 11px;                                                                                    
+                                                                                                      
+     border-radius:16px;                                                                                  
+                                                                                                      
+     background:                                                                                          
+     rgba(255,255,255,.035);                                                                              
+                                                                                                      
+     border:                                                                                              
+     1px solid rgba(255,255,255,.075);                                                                    
+ }                                                                                                        
+                                                                                                      
+                                                                                                      
+ .panel-title{                                                                                            
+                                                                                                      
+     display:flex;                                                                                       
+                                                                                                      
+     align-items:center;                                                                                 
+                                                                                                      
+     gap:7px;                                                                                             
+                                                                                                      
+     font-size:9px;                                                                                       
+                                                                                                      
+     font-weight:900;                                                                                     
+                                                                                                      
+     margin-bottom:5px;                                                                                   
+ }                                                                                                        
+                                                                                                      
+                                                                                                      
+ .panel-icon{                                                                                             
+                                                                                                      
+     width:19px;                                                                                          
+     height:19px;                                                                                         
+                                                                                                      
+     display:grid;                                                                                       
+                                                                                                      
+     place-items:center;                                                                                 
+                                                                                                      
+     border-radius:6px;                                                                                   
+                                                                                                      
+     background:                                                                                          
+     rgba(255,145,0,.1);                                                                                  
+                                                                                                      
+     color:#ffad27;                                                                                       
+ }                                                                                                        
+                                                                                                      
+                                                                                                      
+ .point{                                                                                                  
+                                                                                                      
+     display:flex;                                                                                       
+                                                                                                      
+     align-items:center;                                                                                 
+                                                                                                      
+     gap:7px;                                                                                             
+                                                                                                      
+     padding:3.5px 0;                                                                                     
+                                                                                                      
+     font-size:7.5px;                                                                                     
+                                                                                                      
+     color:#c5c5c5;                                                                                       
+                                                                                                      
+     border-bottom:                                                                                       
+     1px solid rgba(255,255,255,.05);                                                                     
+ }                                                                                                        
+                                                                                                      
+                                                                                                      
+ .point:last-child{                                                                                      
+     border-bottom:0;                                                                                     
+ }                                                                                                        
+                                                                                                      
+                                                                                                      
+ .tick{                                                                                                   
+                                                                                                      
+     width:15px;                                                                                          
+     height:15px;                                                                                         
+                                                                                                      
+     flex:none;                                                                                          
+                                                                                                      
+     display:grid;                                                                                       
+                                                                                                      
+     place-items:center;                                                                                 
+                                                                                                      
+     border-radius:5px;                                                                                   
+                                                                                                      
+     color:#ffad27;                                                                                       
+                                                                                                      
+     background:                                                                                          
+     rgba(255,145,0,.08);                                                                                 
+ }                                                                                                        
+                                                                                                      
+                                                                                                      
+ /* ==================================================                                                   
+    BIG CTA BUTTON                                                                                        
+ ================================================== */                                                   
+                                                                                                      
+ .cta{                                                                                                    
+                                                                                                      
+     position:relative;                                                                                  
+                                                                                                      
+     display:flex;                                                                                       
+                                                                                                      
+     flex-direction:column;                                                                              
+                                                                                                      
+     align-items:center;                                                                                 
+                                                                                                      
+     justify-content:center;                                                                             
+                                                                                                      
+     width:100%;                                                                                          
+                                                                                                      
+     min-height:72px;                                                                                     
+                                                                                                      
+     margin-top:11px;                                                                                     
+                                                                                                      
+     padding:12px;                                                                                        
+                                                                                                      
+     text-decoration:none;                                                                               
+                                                                                                      
+     overflow:hidden;                                                                                    
+                                                                                                      
+     border-radius:18px;                                                                                  
+                                                                                                      
+     color:#111;                                                                                          
+                                                                                                      
+     font-size:                                                                                           
+     clamp(14px,4.2vw,17px);                                                                              
+                                                                                                      
+     font-weight:950;                                                                                     
+                                                                                                      
+     letter-spacing:.3px;                                                                                 
+                                                                                                      
+     background:                                                                                          
+                                                                                                      
+     linear-gradient(                                                                                     
+         100deg,                                                                                          
+         #ff7a00,                                                                                         
+         #ffc400,                                                                                         
+         #ffea55,                                                                                         
+         #ff7a00                                                                                          
+     );                                                                                                   
+                                                                                                      
+     background-size:300% 100%;                                                                           
+                                                                                                      
+     box-shadow:                                                                                          
+                                                                                                      
+     0 12px 35px                                                                                          
+     rgba(255,130,0,.35),                                                                                 
+                                                                                                      
+     0 0 35px                                                                                             
+     rgba(255,174,0,.18);                                                                                 
+                                                                                                      
+     animation:                                                                                           
+                                                                                                      
+     buttonGradient 3.5s ease infinite,                                                                   
+                                                                                                      
+     buttonBounce 2s ease-in-out infinite;                                                                
+ }                                                                                                        
+                                                                                                      
+                                                                                                      
+ /* BUTTON SHINE */                                                                                     
+                                                                                                      
+ .cta:before{                                                                                            
+                                                                                                      
+     content:"";                                                                                          
+                                                                                                      
+     position:absolute;                                                                                  
+                                                                                                      
+     top:0;                                                                                               
+                                                                                                      
+     left:-120%;                                                                                          
+                                                                                                      
+     width:75%;                                                                                           
+                                                                                                      
+     height:100%;                                                                                         
+                                                                                                      
+     background:                                                                                          
+                                                                                                      
+     linear-gradient(                                                                                     
+         90deg,                                                                                           
+         transparent,                                                                                     
+         rgba(255,255,255,.65),                                                                           
+         transparent                                                                                      
+     );                                                                                                   
+                                                                                                      
+     transform:skewX(-22deg);                                                                            
+                                                                                                      
+     animation:                                                                                           
+     buttonShine 2.7s infinite;                                                                           
+ }                                                                                                        
+                                                                                                      
+                                                                                                      
+ /* BUTTON BORDER GLOW */                                                                               
+                                                                                                      
+ .cta:after{                                                                                             
+                                                                                                      
+     content:"";                                                                                          
+                                                                                                      
+     position:absolute;                                                                                  
+                                                                                                      
+     inset:0;                                                                                             
+                                                                                                      
+     border-radius:18px;                                                                                  
+                                                                                                      
+     border:                                                                                              
+     2px solid                                                                                            
+     rgba(255,255,255,.28);                                                                               
+                                                                                                      
+     pointer-events:none;                                                                                
+ }                                                                                                        
+                                                                                                      
+                                                                                                      
+ .cta-text,                                                                                               
+ .cta small{                                                                                              
+                                                                                                      
+     position:relative;                                                                                  
+                                                                                                      
+     z-index:3;                                                                                           
+ }                                                                                                        
+                                                                                                      
+                                                                                                      
+ .cta small{                                                                                              
+                                                                                                      
+     margin-top:5px;                                                                                      
+                                                                                                      
+     font-size:7px;                                                                                       
+                                                                                                      
+     font-weight:900;                                                                                     
+                                                                                                      
+     letter-spacing:1px;                                                                                  
+                                                                                                      
+     opacity:.65;                                                                                         
+ }                                                                                                        
+                                                                                                      
+                                                                                                      
+ @keyframes buttonGradient{                                                                               
+                                                                                                      
+     0%,100%{                                                                                             
+         background-position:0% 50%;                                                                      
+     }                                                                                                    
+                                                                                                      
+     50%{                                                                                                 
+         background-position:100% 50%;                                                                    
+     }                                                                                                    
+ }                                                                                                        
+                                                                                                      
+                                                                                                      
+ @keyframes buttonBounce{                                                                                 
+                                                                                                      
+     0%,100%{                                                                                             
+         transform:scale(1);                                                                             
+     }                                                                                                    
+                                                                                                      
+     50%{                                                                                                 
+         transform:scale(1.025);                                                                         
+     }                                                                                                    
+ }                                                                                                        
+                                                                                                      
+                                                                                                      
+ @keyframes buttonShine{                                                                                  
+                                                                                                      
+     0%{                                                                                                  
+         left:-120%;                                                                                      
+     }                                                                                                    
+                                                                                                      
+     45%,100%{                                                                                            
+         left:140%;                                                                                       
+     }                                                                                                    
+ }                                                                                                        
+                                                                                                      
+                                                                                                      
+ /* ==================================================                                                   
+    DISCLAIMER                                                                                            
+ ================================================== */                                                   
+                                                                                                      
+ .disclaimer{                                                                                             
+                                                                                                      
+     margin:                                                                                              
+     6px 5px 0;                                                                                           
+                                                                                                      
+     text-align:center;                                                                                  
+                                                                                                      
+     color:#5f5f5f;                                                                                       
+                                                                                                      
+     font-size:6.8px;                                                                                     
+                                                                                                      
+     line-height:1.35;                                                                                    
+ }                                                                                                        
+                                                                                                      
+                                                                                                      
+ .footer{                                                                                                 
+                                                                                                      
+     text-align:center;                                                                                  
+                                                                                                      
+     margin-top:4px;                                                                                      
+                                                                                                      
+     color:#484848;                                                                                       
+                                                                                                      
+     font-size:6.5px;                                                                                     
+ }                                                                                                        
+                                                                                                      
+                                                                                                      
+ /* ==================================================                                                   
+    SMALL MOBILE                                                                                          
+ ================================================== */                                                   
+                                                                                                      
+ @media(max-width:380px){                                                                                 
+                                                                                                      
+     .container{                                                                                          
+                                                                                                      
+         width:95%;                                                                                       
+                                                                                                      
+         height:                                                                                          
+         calc(100svh - 10px);                                                                             
+     }                                                                                                    
+                                                                                                      
+                                                                                                      
+     .card{                                                                                               
+                                                                                                      
+         padding:10px;                                                                                    
+                                                                                                      
+         border-radius:23px;                                                                              
+     }                                                                                                    
+                                                                                                      
+                                                                                                      
+     .logo{                                                                                               
+                                                                                                      
+         width:46px;                                                                                      
+         height:46px;                                                                                     
+     }                                                                                                    
+                                                                                                      
+                                                                                                      
+     .hero{                                                                                               
+                                                                                                      
+         padding-top:8px;                                                                                 
+     }                                                                                                    
+                                                                                                      
+                                                                                                      
+     h1{                                                                                                  
+                                                                                                      
+         font-size:27px;                                                                                  
+     }                                                                                                    
+                                                                                                      
+                                                                                                      
+     .subtitle{                                                                                           
+                                                                                                      
+         font-size:9px;                                                                                   
+                                                                                                      
+         margin-top:7px;                                                                                  
+     }                                                                                                    
+                                                                                                      
+                                                                                                      
+     .features{                                                                                           
+                                                                                                      
+         margin-top:8px;                                                                                  
+     }                                                                                                    
+                                                                                                      
+                                                                                                      
+     .feature{                                                                                            
+                                                                                                      
+         padding:6px 2px;                                                                                 
+                                                                                                      
+         font-size:6.5px;                                                                                 
+     }                                                                                                    
+                                                                                                      
+                                                                                                      
+     .feature strong{                                                                                     
+                                                                                                      
+         font-size:13px;                                                                                  
+     }                                                                                                    
+                                                                                                      
+                                                                                                      
+     .content{                                                                                            
+                                                                                                      
+         margin-top:7px;                                                                                  
+     }                                                                                                    
+                                                                                                      
+                                                                                                      
+     .info{                                                                                               
+                                                                                                      
+         padding:8px;                                                                                     
+     }                                                                                                    
+                                                                                                      
+                                                                                                      
+     .panel{                                                                                              
+                                                                                                      
+         margin-top:7px;                                                                                  
+                                                                                                      
+         padding:7px 9px;                                                                                 
+     }                                                                                                    
+                                                                                                      
+                                                                                                      
+     .cta{                                                                                                
+                                                                                                      
+         min-height:65px;                                                                                 
+                                                                                                      
+         margin-top:8px;                                                                                  
+     }                                                                                                    
+                                                                                                      
+                                                                                                      
+     .disclaimer{                                                                                         
+                                                                                                      
+         margin-top:4px;                                                                                  
+                                                                                                      
+         font-size:6.3px;                                                                                 
+     }                                                                                                    
+ }                                                                                                        
+                                                                                                      
+                                                                                                      
+ /* ==================================================                                                   
+    VERY SHORT SCREEN                                                                                     
+ ================================================== */                                                   
+                                                                                                      
+ @media(max-height:680px){                                                                                
+                                                                                                      
+     .hero{                                                                                               
+                                                                                                      
+         padding-top:6px;                                                                                 
+     }                                                                                                    
+                                                                                                      
+                                                                                                      
+     .features{                                                                                           
+                                                                                                      
+         margin-top:6px;                                                                                  
+     }                                                                                                    
+                                                                                                      
+                                                                                                      
+     .content{                                                                                            
+                                                                                                      
+         margin-top:6px;                                                                                  
+     }                                                                                                    
+                                                                                                      
+                                                                                                      
+     .panel{                                                                                              
+                                                                                                      
+         margin-top:6px;                                                                                  
+                                                                                                      
+         padding:6px 9px;                                                                                 
+     }                                                                                                    
+                                                                                                      
+                                                                                                      
+     .point{                                                                                              
+                                                                                                      
+         padding:2.5px 0;                                                                                 
+     }                                                                                                    
+                                                                                                      
+                                                                                                      
+     .cta{                                                                                                
+                                                                                                      
+         margin-top:6px;                                                                                  
+                                                                                                      
+         min-height:58px;                                                                                 
+     }                                                                                                    
+                                                                                                      
+                                                                                                      
+     .disclaimer{                                                                                         
+                                                                                                      
+         margin-top:3px;                                                                                  
+     }                                                                                                    
+ }                                                                                                        
+                                                                                                      
+ </style>                                                                                                
+                                                                                                      
+ </head>                                                                                                 
+                                                                                                      
+                                                                                                      
+ <body>                                                                                                  
+                                                                                                      
+                                                                                                      
+ <main class="page">                                                                                     
+                                                                                                      
+                                                                                                      
+ <!-- ==================================================                                                 
+      MOVING BALLS                                                                                        
+ ================================================== -->                                                   
+                                                                                                      
+ <div class="balls">                                                                                     
+                                                                                                      
+     <div class="ball"></div>                                                                           
+     <div class="ball"></div>                                                                           
+     <div class="ball"></div>                                                                           
+     <div class="ball"></div>                                                                           
+     <div class="ball"></div>                                                                           
+                                                                                                      
+ </div>                                                                                                  
+                                                                                                      
+                                                                                                      
+ <!-- ==================================================                                                 
+      MAIN CARD                                                                                           
+ ================================================== -->                                                   
+                                                                                                      
+ <div class="container">                                                                                 
+                                                                                                      
+ <section class="card">                                                                                  
+                                                                                                      
+                                                                                                      
+ <!-- TOP -->                                                                                            
+                                                                                                      
+ <div class="top">                                                                                       
+                                                                                                      
+     <div class="badge">                                                                                 
+         <span class="dot"></span>                                                                      
+         CRICKET ANALYSIS HUB                                                                             
+     </div>                                                                                              
+                                                                                                      
+     <img                                                                                                
+         src="https://rsads.github.io/kamalcricanalyst/logo.jpg"                            
+         class="logo"                                                                                     
+         alt="Kamal Cricket Analyst Logo">                                                                
+                                                                                                      
+ </div>                                                                                                  
+                                                                                                      
+                                                                                                      
+ <!-- HERO -->                                                                                           
+                                                                                                      
+ <div class="hero">                                                                                      
+                                                                                                      
+     <div class="kicker">                                                                                
+         SMART • SIMPLE • INFORMATIVE                                                                     
+     </div>                                                                                              
+                                                                                                      
+     <h1>                                                                                                
+         KAMAL                                                                                            
+         <span>CRICKET ANALYST™</span>                                                                  
+     </h1>                                                                                               
+                                                                                                      
+     <p class="subtitle">                                                                                
+         Match previews, player form, team updates,                                                       
+         key statistics and cricket information —                                                         
+         presented in a simple format.                                                                    
+     </p>                                                                                                
+                                                                                                      
+ </div>                                                                                                  
+                                                                                                      
+                                                                                                      
+ <!-- FEATURES -->                                                                                       
+                                                                                                      
+ <div class="features">                                                                                  
+                                                                                                      
+     <div class="feature">                                                                               
+         <strong>🏏</strong>                                                                            
+         MATCH                                                                                            
+     </div>                                                                                              
+                                                                                                      
+     <div class="feature">                                                                               
+         <strong>📊</strong>                                                                            
+         STATS                                                                                            
+     </div>                                                                                              
+                                                                                                      
+     <div class="feature">                                                                               
+         <strong>👥</strong>                                                                            
+         TEAMS                                                                                            
+     </div>                                                                                              
+                                                                                                      
+     <div class="feature">                                                                               
+         <strong>⚡</strong>                                                                             
+         UPDATES                                                                                          
+     </div>                                                                                              
+                                                                                                      
+ </div>                                                                                                  
+                                                                                                      
+                                                                                                      
+ <!-- INFORMATION -->                                                                                    
+                                                                                                      
+ <div class="content">                                                                                   
+                                                                                                      
+                                                                                                      
+     <div class="info">                                                                                  
+                                                                                                      
+         <div class="info-number">                                                                       
+             01                                                                                           
+         </div>                                                                                          
+                                                                                                      
+         <div class="info-title">                                                                        
+             Match Preview                                                                                
+         </div>                                                                                          
+                                                                                                      
+         <div class="info-text">                                                                         
+             Key match factors, conditions                                                                
+             and important information.                                                                   
+         </div>                                                                                          
+                                                                                                      
+     </div>                                                                                              
+                                                                                                      
+                                                                                                      
+     <div class="info">                                                                                  
+                                                                                                      
+         <div class="info-number">                                                                       
+             02                                                                                           
+         </div>                                                                                          
+                                                                                                      
+         <div class="info-title">                                                                        
+             Team News                                                                                    
+         </div>                                                                                          
+                                                                                                      
+         <div class="info-text">                                                                         
+             Squads, combinations and                                                                     
+             relevant team updates.                                                                       
+         </div>                                                                                          
+                                                                                                      
+     </div>                                                                                              
+                                                                                                      
+                                                                                                      
+     <div class="info">                                                                                  
+                                                                                                      
+         <div class="info-number">                                                                       
+             03                                                                                           
+         </div>                                                                                          
+                                                                                                      
+         <div class="info-title">                                                                        
+             Player Form                                                                                  
+         </div>                                                                                          
+                                                                                                      
+         <div class="info-text">                                                                         
+             Recent performances and                                                                      
+             useful player statistics.                                                                    
+         </div>                                                                                          
+                                                                                                      
+     </div>                                                                                              
+                                                                                                      
+                                                                                                      
+     <div class="info">                                                                                  
+                                                                                                      
+         <div class="info-number">                                                                       
+             04                                                                                           
+         </div>                                                                                          
+                                                                                                      
+         <div class="info-title">                                                                        
+             Match Updates                                                                                
+         </div>                                                                                          
+                                                                                                      
+         <div class="info-text">                                                                         
+             Important cricket-related                                                                    
+             information and updates.                                                                     
+         </div>                                                                                          
+                                                                                                      
+     </div>                                                                                              
+                                                                                                      
+ </div>                                                                                                  
+                                                                                                      
+                                                                                                      
+ <!-- ANALYSIS PANEL -->                                                                                 
+                                                                                                      
+ <div class="panel">                                                                                     
+                                                                                                      
+     <div class="panel-title">                                                                           
+                                                                                                      
+         <div class="panel-icon">                                                                        
+             ✓                                                                                            
+         </div>                                                                                          
+                                                                                                      
+         WHAT YOU CAN EXPECT                                                                              
+                                                                                                      
+     </div>                                                                                              
+                                                                                                      
+                                                                                                      
+     <div class="point">                                                                                 
+                                                                                                      
+         <div class="tick">                                                                              
+             ✓                                                                                            
+         </div>                                                                                          
+                                                                                                      
+         Team & player information                                                                        
+                                                                                                      
+     </div>                                                                                              
+                                                                                                      
+                                                                                                      
+     <div class="point">                                                                                 
+                                                                                                      
+         <div class="tick">                                                                              
+             ✓                                                                                            
+         </div>                                                                                          
+                                                                                                      
+         Recent form and match statistics                                                                 
+                                                                                                      
+     </div>                                                                                              
+                                                                                                      
+                                                                                                      
+     <div class="point">                                                                                 
+                                                                                                      
+         <div class="tick">                                                                              
+             ✓                                                                                            
+         </div>                                                                                          
+                                                                                                      
+         Match-related analysis & updates                                                                 
+                                                                                                      
+     </div>                                                                                              
+                                                                                                      
+ </div>                                                                                                  
+                                                                                                      
+                                                                                                      
+ <!-- ==================================================                                                 
+      BIG ANIMATED BUTTON                                                                                 
+ ================================================== -->                                                   
+                                                                                                      
+ <a                                                                                                      
+     class="cta"                                                                                          
+     href="https://t.me/+-k2TXkKdo11lODc1"                              
+     target="_blank"                                                                                     
+     rel="noopener noreferrer"                                                                            
+     onclick="trackTelegramClick()">                                                                      
+                                                                                                      
+     <span class="cta-text">                                                                             
+         🏏 JOIN KAMAL CRICKET ANALYST →                                                                  
+     </span>                                                                                             
+                                                                                                      
+     <small>                                                                                             
+         OPEN TELEGRAM • CRICKET ANALYSIS & UPDATES                                                       
+     </small>                                                                                            
+                                                                                                      
+ </a>                                                                                                    
+                                                                                                      
+                                                                                                      
+ <!-- DISCLAIMER -->                                                                                     
+                                                                                                      
+ <p class="disclaimer">                                                                                  
+                                                                                                      
+     For general informational and entertainment purposes only.                                           
+     Match information may change. Verify important details                                               
+     through official cricket sources.                                                                    
+                                                                                                      
+ </p>                                                                                                    
+                                                                                                      
+                                                                                                      
+ <div class="footer">                                                                                    
+                                                                                                      
+     © 2026 KAMAL CRICKET ANALYST™                                                                        
+                                                                                                      
+ </div>                                                                                                  
+                                                                                                      
+                                                                                                      
+ </section>                                                                                              
+                                                                                                      
+ </div>                                                                                                  
+                                                                                                      
+ </main>                                                                                                 
+                                                                                                      
+                                                                                                      
+ <!-- ==================================================                                                 
+      TELEGRAM CLICK TRACKING                                                                             
+ ================================================== -->                                                   
+                                                                                                      
+ <script>                                                                                                
+                                                                                                      
+ function trackTelegramClick(){                                                                           
+                                                                                                      
+     if(typeof fbq === "function"){                                                                       
+                                                                                                      
+         fbq(                                                                                             
+             'track',                                                                                     
+             'Contact',                                                                                   
+             {                                                                                            
+                 content_name:                                                                           
+                 'Kamal Cricket Analyst Telegram',                                                        
+                                                                                                      
+                 content_category:                                                                       
+                 'Cricket Analysis'                                                                       
+             }                                                                                            
+         );                                                                                               
+                                                                                                      
+     }                                                                                                    
+                                                                                                      
+ }                                                                                                        
+                                                                                                      
+ </script>                                                                                               
+                                                                                                      
+                                                                                                      
+ <script>
+document.addEventListener('DOMContentLoaded', function () {
+  var cta = document.querySelector('.cta');
+  if (cta) {
+    cta.addEventListener('click', function () {
+      if (typeof window.fbq === 'function') {
+        window.fbq('track', 'Subscribe');
+      }
+    }, {once:true});
+  }
+});
 </script>
 
-
-</body>
-</html>
+</body>                                                                                                 
+ </html>                                                                                                 
