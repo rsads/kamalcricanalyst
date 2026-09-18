@@ -1477,26 +1477,9 @@ src="https://www.facebook.com/tr?id=2729051890824756&ev=PageView&noscript=1"
 
 
 
-<script>
-(function () {
-  var cta = document.querySelector('.cta');
-  if (!cta) return;
+<!-- Telegram CTA: direct link, no delayed redirect -->
+<!-- Meta Pixel PageView remains active above. -->
 
-  cta.addEventListener('click', function (event) {
-    event.preventDefault();
-
-    var destination = cta.href;
-
-    if (typeof window.fbq === 'function') {
-      window.fbq('track', 'Subscribe');
-    }
-
-    setTimeout(function () {
-      window.location.href = destination;
-    }, 400);
-  }, {once:true});
-})();
-</script>
 
 </body>                                                                                                 
  </html>                                                                                                 
